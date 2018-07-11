@@ -5,15 +5,68 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackground"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/previewProfilePictureBackground"
+        android:layout_width="@dimen/dot_oct"
+        android:layout_height="@dimen/dot_oct"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="@+id/previewProfilePicture"
+        app:layout_constraintEnd_toEndOf="@+id/previewProfilePicture"
+        app:layout_constraintTop_toTopOf="@+id/previewProfilePicture"
+        app:layout_constraintBottom_toBottomOf="@+id/previewProfilePicture"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:src="@drawable/bg_square_rounded_white" />
+
+    <ImageView
+        android:id="@+id/previewProfilePicture"
+        android:layout_width="@dimen/dot_oct"
+        android:layout_height="@dimen/dot_oct"
+        android:layout_marginBottom="@dimen/dot_double"
+        android:scaleType="fitCenter"
+        android:padding="@dimen/dot_quarter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/detailProfilePicture"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:src="@drawable/placeholder_thumbnail_square_primary" />
+
+    <ImageView
+        android:id="@+id/detailProfilePictureBackground"
+        android:layout_width="@dimen/dot_dec"
+        android:layout_height="@dimen/dot_dec"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="@+id/detailProfilePicture"
+        app:layout_constraintEnd_toEndOf="@+id/detailProfilePicture"
+        app:layout_constraintTop_toTopOf="@+id/detailProfilePicture"
+        app:layout_constraintBottom_toBottomOf="@+id/detailProfilePicture"
+        android:src="@drawable/bg_square_rounded_white" />
+
+    <ImageView
+        android:id="@+id/detailProfilePicture"
+        android:layout_width="@dimen/dot_dec"
+        android:layout_height="@dimen/dot_dec"
+        android:layout_marginBottom="@dimen/dot_double"
+        android:scaleType="fitCenter"
+        android:padding="@dimen/dot_quarter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/previewProfilePicture"
+        app:layout_constraintBottom_toTopOf="@+id/detailProfileName"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:src="@drawable/placeholder_thumbnail_square_primary" />
+
     <TextView
+        android:id="@+id/detailProfileName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="@string/image_source"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/detailProfilePicture" />
 
 </android.support.constraint.ConstraintLayout>

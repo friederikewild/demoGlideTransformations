@@ -5,6 +5,8 @@
     <color name="colorPrimaryLight">#BBDEFB</color>
     <color name="colorAccent">#E040FB</color>
 
+    <color name="colorBackground">#aaaaaa</color>
+
     <color name="primary_text">#212121</color>
     <color name="secondary_text">#757575</color>
     <color name="icons">#FFFFFF</color>
