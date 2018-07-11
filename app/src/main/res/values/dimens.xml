@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Basic 8dp raster support -->
+    <dimen name="zero">0dp</dimen>
+    <dimen name="dot_quarter">2dp</dimen>
+    <dimen name="dot_half">4dp</dimen>
+    <dimen name="dot">8dp</dimen>
+    <dimen name="dot_one_half">12dp</dimen>
+    <dimen name="dot_double">16dp</dimen>
+    <dimen name="dot_trip">24dp</dimen>
+    <dimen name="dot_quad">32dp</dimen>
+    <dimen name="dot_quin">40dp</dimen>
+    <dimen name="dot_sex">48dp</dimen>
+    <dimen name="dot_sept">56dp</dimen>
+    <dimen name="dot_oct">64dp</dimen>
+    <dimen name="dot_non">72dp</dimen>
+    <dimen name="dot_dec">80dp</dimen>
+    <dimen name="dot_vig">160dp</dimen>
+
+    <!-- Provide readable width/height for constraintLayout where zero = match constraint -->
+    <dimen name="match_constraints">@dimen/zero</dimen>
+
+    <!-- Radius for profile picture -->
+    <dimen name="profile_corner_radius">@dimen/dot</dimen>
+</resources>

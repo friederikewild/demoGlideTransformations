@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="@color/colorAccent" />
+
+            <corners android:radius="@dimen/profile_corner_radius" />
+
+            <!-- Adjust size to suit icon that is defined as @dimen/dot_trip -->
+            <size
+                android:width="@dimen/dot_trip"
+                android:height="@dimen/dot_trip" />
+        </shape>
+    </item>
+
+    <item
+        android:gravity="center"
+        android:drawable="@drawable/ic_profile_placeholder" />
+
+</layer-list>
