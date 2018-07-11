@@ -9,8 +9,8 @@
 
             <!-- Adjust size to suit icon that is defined as @dimen/dot_trip -->
             <size
-                android:width="@dimen/dot_trip"
-                android:height="@dimen/dot_trip" />
+                android:width="@dimen/dot_dec"
+                android:height="@dimen/dot_dec" />
         </shape>
     </item>
 

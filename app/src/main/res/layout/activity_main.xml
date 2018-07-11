@@ -5,20 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/dot_double"
     android:background="@color/colorBackground"
     tools:context=".MainActivity">
-
-    <ImageView
-        android:id="@+id/previewProfilePictureBackground"
-        android:layout_width="@dimen/dot_oct"
-        android:layout_height="@dimen/dot_oct"
-        android:scaleType="fitCenter"
-        app:layout_constraintStart_toStartOf="@+id/previewProfilePicture"
-        app:layout_constraintEnd_toEndOf="@+id/previewProfilePicture"
-        app:layout_constraintTop_toTopOf="@+id/previewProfilePicture"
-        app:layout_constraintBottom_toBottomOf="@+id/previewProfilePicture"
-        app:layout_constraintVertical_chainStyle="packed"
-        android:src="@drawable/bg_square_rounded_white" />
 
     <ImageView
         android:id="@+id/previewProfilePicture"
@@ -32,18 +21,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/detailProfilePicture"
         app:layout_constraintVertical_chainStyle="packed"
-        tools:src="@drawable/placeholder_thumbnail_square_primary" />
-
-    <ImageView
-        android:id="@+id/detailProfilePictureBackground"
-        android:layout_width="@dimen/dot_dec"
-        android:layout_height="@dimen/dot_dec"
-        android:scaleType="fitCenter"
-        app:layout_constraintStart_toStartOf="@+id/detailProfilePicture"
-        app:layout_constraintEnd_toEndOf="@+id/detailProfilePicture"
-        app:layout_constraintTop_toTopOf="@+id/detailProfilePicture"
-        app:layout_constraintBottom_toBottomOf="@+id/detailProfilePicture"
-        android:src="@drawable/bg_square_rounded_white" />
+        android:background="@drawable/bg_square_rounded_oct_white"
+        tools:src="@drawable/placeholder_thumbnail_square_oct_primary" />
 
     <ImageView
         android:id="@+id/detailProfilePicture"
@@ -57,7 +36,8 @@
         app:layout_constraintTop_toBottomOf="@+id/previewProfilePicture"
         app:layout_constraintBottom_toTopOf="@+id/detailProfileName"
         app:layout_constraintVertical_chainStyle="packed"
-        tools:src="@drawable/placeholder_thumbnail_square_primary" />
+        android:background="@drawable/bg_square_rounded_dec_white"
+        tools:src="@drawable/placeholder_thumbnail_square_dec_primary" />
 
     <TextView
         android:id="@+id/detailProfileName"

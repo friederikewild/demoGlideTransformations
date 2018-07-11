@@ -14,15 +14,23 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // For testing: Url to test profile picture
-        val pictureUrl = "https://upload.wikimedia.org/wikipedia/commons/d/dd/Chuck_Norris_Small.JPG"
+        val pictureUrl = "https://upload.wikimedia.org/wikipedia/commons/9/93/ChuckNorris200611292256.jpg"
         val radius = resources.getDimensionPixelSize(R.dimen.profile_corner_radius)
+
+        GlideApp.with(this)
+                .load("INVALID_URL")
+                .transform(RoundedCorners(radius))
+// .transforms(CenterCrop(), RoundedCorners(radius))
+                .placeholder(R.drawable.placeholder_thumbnail_square_dec_primary)
+                .error(R.drawable.placeholder_thumbnail_square_dec_primary)
+                .transition(DrawableTransitionOptions.withCrossFade()).into(previewProfilePicture)
 
         GlideApp.with(this)
                 .load(pictureUrl)
                 .transform(RoundedCorners(radius))
 // .transforms(CenterCrop(), RoundedCorners(radius))
-                .placeholder(R.drawable.placeholder_thumbnail_square_primary)
-                .error(R.drawable.placeholder_thumbnail_square_primary)
+                .placeholder(R.drawable.placeholder_thumbnail_square_dec_primary)
+                .error(R.drawable.placeholder_thumbnail_square_dec_primary)
                 .transition(DrawableTransitionOptions.withCrossFade()).into(detailProfilePicture)
     }
 }
